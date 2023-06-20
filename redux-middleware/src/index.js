@@ -7,9 +7,12 @@ import { applyMiddleware, legacy_createStore } from 'redux';
 import rootReducer from './modules';
 import { Provider } from 'react-redux';
 import loggerMiddleware from './lib/loggerMiddleware';
+import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
 
+const logger = createLogger();
 //store 생성
-const store = legacy_createStore(rootReducer, applyMiddleware(loggerMiddleware));
+const store = legacy_createStore(rootReducer, applyMiddleware(logger, thunk));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
