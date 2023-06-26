@@ -4,15 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { applyMiddleware, legacy_createStore } from 'redux';
-import rootReducer from './modules';
+import rootReducer, { rootSaga } from './modules';
 import { Provider } from 'react-redux';
 import loggerMiddleware from './lib/loggerMiddleware';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 
 const logger = createLogger();
+const sagaMiddleware = createSagaMiddleware();
+
 //store 생성
-const store = legacy_createStore(rootReducer, applyMiddleware(logger, thunk));
+const store = legacy_createStore(rootReducer, applyMiddleware(logger, thunk, sagaMiddleware));
+
+sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
