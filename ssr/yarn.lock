@@ -2526,6 +2526,11 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+Express@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/Express/-/Express-3.0.1.tgz#e64ef7cb37684a69fc22d4111ddde4498896496a"
+  integrity sha512-T8VnUAU1Kjm6wRidtZVjpCYGuSY9IXEYatng3QQ2Q7QQfDoo+tNeJFucDaZ79V4babYWarc4VkKsipC9x2EFlQ==
+
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.6.tgz#41b80f2c871d19686216b82309231cfd3cb3d291"
